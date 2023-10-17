@@ -18,7 +18,8 @@ O projeto possui as seguintes funcionalidades:
 
 O projeto é organizado da seguinte forma:
 
-- `TabelaHash.java`: Implementação da tabela hash com tratamento de colisão.
+- `TabelaHash.java`: Implementação da tabela hash com tratamento de colisão (encadeamento).
+- `TabelaHashComEnderecamentoAberto.java`: Implementação da tabela hash com tratamento de colisão (endereçamento).
 - `ParChaveValor.java`: Classe que representa um par chave-valor.
 - `Main.java`: Classe principal que demonstra o uso da tabela hash.
 
