@@ -22,4 +22,5 @@ O projeto é organizado da seguinte forma:
 - `TabelaHashComEnderecamentoAberto.java`: Implementação da tabela hash com tratamento de colisão (endereçamento).
 - `ParChaveValor.java`: Classe que representa um par chave-valor.
 - `Main.java`: Classe principal que demonstra o uso da tabela hash.
+- `TesteEficiencia.java`: Classe de teste comparitivo entre as duas tabelas.
 
