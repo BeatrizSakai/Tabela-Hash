@@ -5,8 +5,8 @@ public class Main {
 
          //Tabela Hash com Encadeamento
         tabelaHash.inserir(43, "Maria");
-        tabelaHash.inserir(1, "bia");
-        tabelaHash.inserir(11, "Alice");
+        tabelaHash.inserir(1, "Bia");
+        tabelaHash.inserir(11, "Emilly");
 
         //Imprime tabela
         tabelaHash.imprimirTabelaCompleta();
@@ -27,8 +27,8 @@ public class Main {
         
         //Tabela Hash com Enderaçamento Aberto
         tabelaEnderecamentoAberto.inserir(43, "Maria");
-        tabelaEnderecamentoAberto.inserir(1, "bia");
-        tabelaEnderecamentoAberto.inserir(11, "Alice");
+        tabelaEnderecamentoAberto.inserir(1, "Bia");
+        tabelaEnderecamentoAberto.inserir(11, "Emilly");
 
         //Imprime tabela
         tabelaEnderecamentoAberto.imprimirTabelaCompleta();
