@@ -4,6 +4,15 @@
 
 Este é um projeto simples de uma tabela hash em Java com implementações de tratamento de colisão por encadeamento e endereçamento aberto. O projeto foi criado como parte de um curso de estrutura de dados e tem como objetivo demonstrar a implementação dessas duas estratégias de tratamento de colisão.
 
+## Tabela Hash
+Uma tabela hash, também conhecida como mapa hash, é uma estrutura de dados fundamental em ciência da computação. Ela desempenha um papel essencial na organização eficiente de dados, permitindo o armazenamento e a recuperação rápidos de informações com base em chaves correspondentes.
+
+## Funcionamento Básico
+A ideia central por trás de uma tabela hash é utilizar uma função de hash para converter uma chave, que pode ser uma string ou qualquer outra informação identificadora, em um valor numérico único. Esse valor numérico, chamado de "hash code," é usado como um índice para acessar um local de armazenamento na tabela. A principal vantagem desse método é a capacidade de acessar os dados em tempo constante, o que torna as tabelas hash extremamente eficientes para operações de leitura e escrita.
+
+## Resolução de Colisões
+No entanto, é importante mencionar que colisões podem ocorrer, ou seja, duas chaves diferentes podem ser mapeadas para o mesmo índice na tabela. Para lidar com isso, existem diversas técnicas, como o encadeamento separado (manter uma lista ligada de valores no mesmo índice) e a resolução de colisões por sondagem (tentativa de encontrar o próximo índice disponível na tabela).
+
 ## Funcionalidades
 
 O projeto possui as seguintes funcionalidades:
