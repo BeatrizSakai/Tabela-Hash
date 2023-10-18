@@ -41,10 +41,12 @@ public class TabelaHash {
         
         for (ParChaveValor parChaveValor : compartimento) {
             if (parChaveValor.getChave() == chave) {
+                System.out.println("Encontrada: [" + index + "] " + parChaveValor.getValor());
                 return parChaveValor.getValor();
             }
         }
         
+        System.out.println("Chave não encontrada");
         return null; // Chave não encontrada
     }
 
@@ -56,10 +58,12 @@ public class TabelaHash {
             if (parChaveValor.getChave() == chave) {
                 compartimento.remove(parChaveValor);
                 tamanho--;
+                System.out.println("Removido: [" + index + "] " + parChaveValor.getValor());
                 return parChaveValor.getValor();
             }
         }
-        
+
+        System.out.println("Chave não encontrada");
         return null; // Chave não encontrada
     }
 
