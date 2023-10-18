@@ -87,6 +87,25 @@ public class TabelaHash {
         tabela = newTabela;
     }
 
-
+    public void imprimirTabelaCompleta() {
+        for (int i = 0; i < tabela.length; i++) {
+            ArrayList<ParChaveValor> compartimento = tabela[i];
+            if (compartimento.isEmpty()) {
+                System.out.println("[" + i + "] Vazio");
+            } else {
+                StringBuilder valores = new StringBuilder();
+                for (ParChaveValor parChaveValor : compartimento) {
+                    Object valor = parChaveValor.getValor();
+                    if (valores.length() > 0) {
+                        valores.append(", ");
+                    }
+                    valores.append(valor);
+                }
+                System.out.println("[" + i + "] " + valores.toString());
+            }
+        }
+    }
+    
+    
 
 }
