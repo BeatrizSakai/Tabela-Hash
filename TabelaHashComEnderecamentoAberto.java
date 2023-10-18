@@ -16,24 +16,7 @@ public class TabelaHashComEnderecamentoAberto {
         capacidadeMaxima = (int) (capacidadeInicial * fatorCarga);
     }
 
-    public void inserir(int chave, Object valor) {
-        int index = hash(chave);
-
-        while (tabela.get(index) != null) {
-            if (tabela.get(index).getChave() == chave) {
-                tabela.get(index).setValor(valor);
-                return;
-            }
-            index = (index + 1) % tabela.size();
-        }
-
-        tabela.set(index, new ParChaveValor(chave, valor));
-        tamanho++;
-
-        if (tamanho > capacidadeMaxima) {
-            resizeTable();
-        }
-    }
+    
 
     public Object buscar(int chave) {
         int index = hash(chave);
@@ -104,4 +87,45 @@ public class TabelaHashComEnderecamentoAberto {
 
         tabela = novaTabela;
     }
+    
+    public void inserir(int chave, Object valor) {
+        int index = hash(chave);
+        int originalIndex = index;
+
+        while (tabela.get(index) != null) {
+            if (tabela.get(index).getChave() == chave) {
+                tabela.get(index).setValor(valor);
+                System.out.println("Colisão: " + valor + " colidiu com " + tabela.get(index).getValor() + " e foi para o índice " + index);
+                return;
+            }
+            index = (index + 1) % tabela.size();
+            if (index == originalIndex) {
+                System.out.println("Tabela cheia, não é possível inserir.");
+                return;
+            }
+        }
+
+        if (index != originalIndex) {
+            System.out.println("Colisão: " + valor + " colidiu com " + tabela.get(originalIndex).getValor() + " e foi para o índice " + index);
+        }
+
+        tabela.set(index, new ParChaveValor(chave, valor));
+        tamanho++;
+
+        if (tamanho > capacidadeMaxima) {
+            resizeTable();
+        }
+    }
+
+    public void imprimirTabelaCompleta() {
+        for (int i = 0; i < tabela.size(); i++) {
+            ParChaveValor par = tabela.get(i);
+            if (par == null) {
+                System.out.println("[" + i + "] Vazio");
+            } else {
+                System.out.println("[" + i + "] " + par.getValor());
+            }
+        }
+    }
+
 }
