@@ -1,3 +1,5 @@
+<img src="/assets/Tabela hash.png">
+
 # Projeto de Estrutura de Dados em Java
 
 Este é um projeto simples de uma tabela hash em Java com implementações de tratamento de colisão por encadeamento e endereçamento aberto. O projeto foi criado como parte de um curso de estrutura de dados e tem como objetivo demonstrar a implementação dessas duas estratégias de tratamento de colisão.
